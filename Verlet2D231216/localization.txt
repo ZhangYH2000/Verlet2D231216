@@ -1,0 +1,106 @@
+title $2D Verlet 碰撞模拟$ $2D Verlet Simulation$
+frm_tm $[ZhangYH] 帧时间: $ $[ZhangYH] Frame Time: $
+bt_save $保存$ $Save$
+bt_load $载入$ $Load$
+fpn_global $全局$ $Global$
+compile $解释并运行$ $Interpret & Run$
+fpn_cmd $指令$ $Command$
+unnamed_par $未命名$ $Unnamed$
+bt_del_par $删除$ $Del.$
+bt_add_par $新建参数$ $Create Param.$
+fpn_par $参数$ $Parameters$
+fpn_lang $语言/Lang.$ $Language$
+fpn_about $关于$ $About$
+fpn_shape $形状$ $Shape$
+bt_ld_shape $载入$ $Load$
+bt_sv_shape $保存$ $Save$
+bt_del_shape $删除$ $Del.$
+shapes_saved $已保存形状: $ $Shapes Saved: $
+bt_body_ok $确认$ $OK$
+bt_body_del $删除$ $Del.$
+fpn_body $物体$ $Body$
+conn $连接: $ $Link: $
+cb_body_con $选定: $ $Sel.: $
+bt_con_ok $确认$ $OK$
+bt_con_del $删除$ $Del.$
+fpn_link $连接$ $Link$
+body_o $位置: $ $Position: $
+body_v $速度: $ $Velocity: $
+body_r $半径: $ $Radius: $
+body_inv_m $质量倒数: $ $Inverse Mass: $
+body_k $反应系数: $ $Reaction Coeff.: $
+body_damp $阻尼: $ $Damping: $
+body_friction $摩擦: $ $Friction: $
+body_viscosity $粘性: $ $Viscosity: $
+body_vanish $自动消失: $ $Auto Vanish: $
+body_not_sel $未选中物体. $ $No body selected. $
+link_rope $绳子: $ $Rope: $
+link_solid $实体: $ $Solid: $
+link_spring $弹簧: $ $Spring: $
+link_breakable $可破坏: $ $Breakable: $
+link_len $长度: $ $Length: $
+link_damp $阻尼: $ $Damping: $
+link_hooke $胡克系数: $ $Hooke Coeff.: $
+link_stiff $强度: $ $Stiffness: $
+link_r $半径: $ $Radius: $
+link_aux $辅助: $ $Aux.: $
+link_square $方形: $ $Square: $
+link_not_sel $未选中连接. $ $No link selected. $
+t $时间: $ $Time: $
+vol $音量: $ $Volume: $
+rdt $步长: $ $Delta Time: $
+n_step $迭代次数: $ $Iteration Num.: $
+gx $横向重力: $ $Horiz. Gravity: $
+gy $纵向重力: $ $Vert. Gravity: $
+skip_friction $跳过摩擦: $ $Skip Friction: $
+s_grid $网格边长: $ $Grid Size: $
+no_bd_coll $圆形边界: $ $Round Bd.: $
+ranged_drag $范围抓取: $ $Ranged Drag: $
+r_drag $抓取半径: $ $Drag Radius: $
+shuffle_links $连接洗牌: $ $Shuffle Links: $
+no_grid_coll $取消格间碰撞: $ $No Grid Coll.: $
+no_break $取消破坏: $ $No Break: $
+mult_energy $能量显示乘数: $ $Energy Disp. Mult.: $
+mult_velocity $速度显示乘数: $ $Velocity Disp. Mult.: $
+mult_force $受力显示乘数: $ $Force Disp. Mult.: $
+wind $开启风: $ $Allow Wind: $
+p_wind $风概率: $ $Wind Prob.: $
+x_wind $横向风速度: $ $Horiz. Wind Velo.: $
+y_wind $纵向风速度: $ $Vert. Wind Velo.: $
+mode_drag $拖拽$ $Drag$
+mode_slct $选择$ $Select$
+mode_poly $障碍物$ $Obstacle$
+mode_conn $连接$ $Link$
+mode_rope $珠串$ $Strand$
+mode_sbox $框架盒子$ $Frame Box$
+mode_fshp $实体形状$ $Solid Shape$
+mode_fbox $实体盒子$ $Solid Box$
+mode_knfe $小刀$ $Knife$
+mode_dele $删除$ $Delete$
+lb_mode $模式: $ $Mode: $
+lb_mouse $鼠标: $ $Mouse: $
+start $启动$ $Start$
+pause $暂停$ $Pause$
+bt_reset $重置$ $Reset$
+unmute $解除静音$ $Unmute$
+mute $静音$ $Mute$
+lb_n_body $物体数: $ $Body Num.: $
+about_txt
+$这是一个使用 Verlet 方法的 2D 碰撞模拟程序. 它可以模拟小球之间的碰撞, 也支持连接件. 用户可以设置粘性, 胡克系数, 阻尼, 重力场, 引力场等参数. 可以试试创建和删除物体和连接. 有多种可视化模式.
+
+相比之前使用冲量方法的刚体模拟程序, 这个程序在堆叠和多个连接的情形表现比较好, 因此更加适合对流体, 珠串等进行模拟. 但这有代价: 程序无法模拟弹性碰撞的情形, 对刚体的支持不好 (只能用实体杆连接球形顶点来代替).
+
+下面是鼠标操作的说明. 一般情况下, 按住 [鼠标右键] 来创造小球, 用 [鼠标左键] 来选择和拖拽小球. 有些情形下这些操作会有不同效果. 
+
+下面是部分键盘操作的说明. 用 [空格键] 暂停和启动模拟; 用 [B] 切换可视化模式; 用 [V] 显示或隐藏速度向量; 用 [K] 显示或隐藏动能密度; 用 [L] 显示或隐藏连接件的受力; 用 [A] 开启或关闭范围选取; 用 [W] 开启或关闭风; 用 [Z] 显示或隐藏选中物体的轨迹; 用 [ORPCTSMXNG] 键切换程序模式, 不同模式会有不同效果; 按下 [QE] 来旋转选中的障碍物; 按下 [H] 暂时禁用连接件的断裂. 
+
+这个程序缺少教程, 你可以参考程序文件内的示例代码, 你也可以参考 itch.io 相应页面的演示视频链接. 我写这个程序只是出于学习目的, 感兴趣的话非常欢迎在我的 itch.io 页面留下评论. (2023/12/30)$
+$(Translated by ChatGPT) This is a 2D collision simulation program using the Verlet method. It can simulate collisions between small balls and also supports connectors. Users can set parameters such as stickiness, spring constant, damping, gravity field, and gravitational field. You can try creating and deleting objects and connections. There are multiple visualization modes.
+
+Compared to previous rigid body simulation programs using impulse methods, this program performs better in stacking and multiple connection scenarios, making it more suitable for simulating fluids, bead strings, and similar scenarios. However, this comes at a cost: the program cannot simulate scenarios involving elastic collisions, and its support for rigid bodies is limited (only using solid rods to connect spherical vertices as a substitute).
+
+Below are instructions for mouse operations. In general, hold the [right mouse button] to create a small ball and use the [left mouse button] to select and drag small balls. In some cases, these operations may have different effects.
+
+Here are some keyboard operations. Use the [space bar] to pause and resume the simulation; use [B] to switch visualization modes; use [V] to show or hide velocity vectors; use [K] to show or hide kinetic energy density; use [L] to show or hide the forces on connectors; use [A] to enable or disable range selection; use [W] to enable or disable wind; use [Z] to show or hide the trajectory of selected objects; use [ORPCTSMXNG] keys to switch program modes, different modes will have different effects; press [QE] to rotate the selected obstacle; press [H] to temporarily disable the breaking of connectors.
+
+This program lacks a tutorial. You can refer to the example code in the program files or the demonstration video link on the corresponding itch.io page. I developed this program for learning purposes, and if you are interested, please feel free to leave comments on my itch.io page. (2023/12/30)$
